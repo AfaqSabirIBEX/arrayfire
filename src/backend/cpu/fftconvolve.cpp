@@ -38,6 +38,9 @@ using reorderFunc = std::function<void(
 template<typename T>
 Array<T> fftconvolve(Array<T> const& signal, Array<T> const& filter,
                      const bool expand, AF_BATCH_KIND kind, const int rank) {
+
+    throw std::runtime_error("FFT Functions not implemented.");
+
     using convT = typename std::conditional<std::is_integral<T>::value ||
                                                 std::is_same<T, float>::value,
                                             float, double>::type;

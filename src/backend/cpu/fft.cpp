@@ -106,6 +106,8 @@ void fft_inplace(Array<T> &in, const int rank, const bool direction) {
     //     transform.destroy(plan);
     // };
     // getQueue().enqueue(func, in, in.getDataDims());
+
+    throw std::runtime_error("FFT Functions not implemented.");
 }
 
 template<typename Tc, typename Tr>
@@ -147,6 +149,8 @@ Array<Tc> fft_r2c(const Array<Tr> &in, const int rank) {
     // };
 
     // getQueue().enqueue(func, out, out.getDataDims(), in, in.getDataDims());
+
+    throw std::runtime_error("FFT Functions not implemented.");
 
     return out;
 }
@@ -211,6 +215,8 @@ Array<Tr> fft_c2r(const Array<Tc> &in, const dim4 &odims, const int rank) {
     //                        odims);
     // }
 #endif
+
+    throw std::runtime_error("FFT Functions not implemented.");
 
     return out;
 }
