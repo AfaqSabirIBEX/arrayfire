@@ -327,12 +327,12 @@ if(BUILD_WITH_MKL)
       target_link_libraries(afcpu PRIVATE MKL::RT)
   endif()
 else()
-  target_link_libraries(afcpu
-    PRIVATE
-      ${CBLAS_LIBRARIES}
-      FFTW::FFTW
-      FFTW::FFTWF
-    )
+  # target_link_libraries(afcpu
+  #   PRIVATE
+  #     ${CBLAS_LIBRARIES}
+  #     FFTW::FFTW
+  #     FFTW::FFTWF
+  #   )
   if(LAPACK_FOUND AND LAPACKE_FOUND)
     target_link_libraries(afcpu PRIVATE LAPACKE::LAPACKE ${LAPACK_LIBRARIES})
   endif()
